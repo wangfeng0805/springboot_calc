@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 
 public class PlusOperation extends AbstractOperation implements Operation {
 
-    PlusOperation(){super(2,OperationFactory.PLUS.name());}
+    PlusOperation(){super(2,OperationFactory.PLUS.getOperator());}
 
     @Override
     public BigDecimal execCalc(BigDecimal[] params){

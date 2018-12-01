@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 import java.util.Stack;
 
 @Data
-public class CalcUnitImpl implements CalcUnit {
+public class AirCalcUnit implements CalcUnit {
 
     BigDecimal[] params;
     String optName;

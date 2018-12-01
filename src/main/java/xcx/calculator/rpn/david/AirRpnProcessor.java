@@ -11,10 +11,11 @@ import java.util.Stack;
 
 @Log4j2
 @Service
-public class RpnProcessorImpl implements RpnProcessor {
+public class AirRpnProcessor implements RpnProcessor {
 
     private Stack<BigDecimal> stack;
     private Stack<Operation> operationHistory;
+
     @Autowired
     private CalcParser calcParser;
 
@@ -25,14 +26,16 @@ public class RpnProcessorImpl implements RpnProcessor {
 
     public Stack<BigDecimal> process(String line) {
         log.info("The input string:"+line);
-        log.debug("Start process.");
+        int positionEntry = 0;
         List<InputEntry> entries = calcParser.parseEntries(line);
         for(InputEntry entry:entries){
             try {
                 entry.calc(stack,operationHistory);
+                positionEntry++;
             } catch (InsufficientParamsException e) {
-                e.setEntryIndex(entry.getEntryIndex());
+                e.setEntryPosition(positionEntry);
                 log.error(e.getMessage());
+                break;
             }
         }
         return stack;

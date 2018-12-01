@@ -15,7 +15,7 @@ public abstract class AbstractOperation implements  Operation{
     }
 
     AbstractOperation(int paramsCountNeed,String optName){
-        this.calcUnit = new CalcUnitImpl();
+        this.calcUnit = new AirCalcUnit();
         this.calcUnit.setParamsCountNeed(paramsCountNeed);
         this.calcUnit.setOptName(optName);
     }

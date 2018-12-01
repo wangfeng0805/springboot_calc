@@ -7,7 +7,7 @@ public class InsufficientParamsException extends Exception {
 
     private String operator;
 
-    private int entryIndex;
+    private int entryPosition;
 
     public InsufficientParamsException(String operator) {
         this.operator = operator;
@@ -15,6 +15,6 @@ public class InsufficientParamsException extends Exception {
 
     @Override
     public String getMessage() {
-        return "operator " + this.getOperator() + " (position: " + this.getEntryIndex() + "): insufficient parameters";
+        return "operator " + this.getOperator() + " (position: " + this.getEntryPosition() + "): insufficient parameters";
     }
 }
