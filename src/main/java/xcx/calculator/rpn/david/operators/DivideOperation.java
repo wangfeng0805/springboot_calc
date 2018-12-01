@@ -3,41 +3,38 @@ package xcx.calculator.rpn.david.operators;
 import xcx.calculator.rpn.david.InsufficientParamsException;
 
 import java.math.BigDecimal;
-import java.math.MathContext;
-import java.math.RoundingMode;
 import java.util.Stack;
 
-import static java.lang.StrictMath.sqrt;
+public class DivideOperation extends AbstractOperation{
 
-public class SqrtOperation extends AbstractOperation implements Operation {
+    final Operator opt = Operator.DIVIDE;
 
-    final Operator opt = Operator.SQRT;
-
-    public SqrtOperation() {
+    public DivideOperation() {
     }
 
     @Override
     public void undo(Stack<BigDecimal> stack){
         stack.pop();
-        stack.push(this.getNum1());
+        stack.push(getNum2());
+        stack.push(getNum1());
     }
 
-    SqrtOperation(BigDecimal num1){
+    DivideOperation(BigDecimal num1,BigDecimal num2){
         this.setNum1(num1);
+        this.setNum2(num2);
     }
 
     @Override
     public void run(Stack<BigDecimal> stack,Stack<Operation> operationHistory) throws InsufficientParamsException {
-        if(stack.size() < 1){
+        if(stack.size() < 2){
             throw new InsufficientParamsException(opt.name());
         }
         BigDecimal firstNumber = stack.pop();;
+        BigDecimal secNumber = stack.pop();
 
-        BigDecimal calculationResult = new BigDecimal(sqrt(firstNumber.doubleValue()), MathContext.DECIMAL128)
-                .setScale(15, RoundingMode.HALF_UP)
-                .stripTrailingZeros();
+        BigDecimal calculationResult = firstNumber.divide(secNumber);
         stack.push(calculationResult);
-        SqrtOperation operation = new SqrtOperation(firstNumber);
+        DivideOperation operation = new DivideOperation(firstNumber,secNumber);
         operationHistory.push(operation);
     }
 }

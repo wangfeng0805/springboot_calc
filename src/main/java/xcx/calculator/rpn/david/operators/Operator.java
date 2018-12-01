@@ -51,16 +51,16 @@ public enum Operator {
                 return new PlusOperation();
             case UNDO:
                 return new UndoOperation();
-//            case MINUS:
-//                return new MinusOperation();
-//            case MULTIPLY:
-//                return new MultiplyOperation();
-//            case DIVIDE:
-//                return new DivideOperation();
-//            case CLEAR:
-//                return new ClearOperation();
-//            case SQRT:
-//                return new SqrtOperation();
+            case MINUS:
+                return new MinusOperation();
+            case MULTIPLY:
+                return new MultiplyOperation();
+            case DIVIDE:
+                return new DivideOperation();
+            case CLEAR:
+                return new ClearOperation();
+            case SQRT:
+                return new SqrtOperation();
             default:
                 throw new RuntimeException("Invalid operator:" + operator);
         }
