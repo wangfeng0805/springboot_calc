@@ -48,7 +48,7 @@ public enum Operator {
         Operator opt = getOperator(operator);
         switch (opt) {
             case PLUS:
-                return new PlusOperation();
+                return new PlusOperation(new DynamicParamStrategy());
             case UNDO:
                 return new UndoOperation();
             case MINUS:
