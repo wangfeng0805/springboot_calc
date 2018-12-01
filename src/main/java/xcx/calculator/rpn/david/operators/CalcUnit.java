@@ -6,13 +6,10 @@ import java.math.BigDecimal;
 import java.util.List;
 import java.util.Stack;
 
-public interface ParamStrategy {
-
+public interface CalcUnit {
     void undo(Stack<BigDecimal> stack);
-
-    void init(BigDecimal... initValues) throws InsufficientParamsException;
-
+    void init(Stack<BigDecimal> stack) throws InsufficientParamsException;
     void setOptName(String optName);
-
     void setParamsCountNeed(int count);
+    BigDecimal[] getParams();
 }

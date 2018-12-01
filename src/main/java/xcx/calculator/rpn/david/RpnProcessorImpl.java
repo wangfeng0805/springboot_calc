@@ -26,8 +26,8 @@ public class RpnProcessorImpl implements RpnProcessor {
     public Stack<BigDecimal> process(String line) {
         log.info("The input string:"+line);
         log.debug("Start process.");
-        List<CalcEntry> entries = calcParser.parseEntries(line);
-        for(CalcEntry entry:entries){
+        List<InputEntry> entries = calcParser.parseEntries(line);
+        for(InputEntry entry:entries){
             try {
                 entry.calc(stack,operationHistory);
             } catch (InsufficientParamsException e) {

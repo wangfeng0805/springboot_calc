@@ -2,7 +2,7 @@ package xcx.calculator.rpn.david.operators;
 
 import java.math.BigDecimal;
 
-public enum Operator {
+public enum OperationFactory {
 
     PLUS("+"),
     MINUS("-"),
@@ -14,7 +14,7 @@ public enum Operator {
 
     private String operator;
 
-    Operator(String value) {
+    OperationFactory(String value) {
         operator = value;
     }
 
@@ -24,7 +24,7 @@ public enum Operator {
 
     public static boolean isValidOperator(String operator) {
 
-        for (Operator validOperator : Operator.values()) {
+        for (OperationFactory validOperator : OperationFactory.values()) {
             if (validOperator.getOperator().equals(operator)) {
                 return true;
             }
@@ -32,8 +32,8 @@ public enum Operator {
         return false;
     }
 
-    public static Operator getOperator(String operator) {
-        for (Operator validOperator : Operator.values()) {
+    public static OperationFactory getOperator(String operator) {
+        for (OperationFactory validOperator : OperationFactory.values()) {
             if (validOperator.getOperator().equals(operator)) {
                 return validOperator;
             }
@@ -45,10 +45,10 @@ public enum Operator {
         return new PushOperation(pushValue);
     }
     public static Operation getOperation(String operator) {
-        Operator opt = getOperator(operator);
+        OperationFactory opt = getOperator(operator);
         switch (opt) {
             case PLUS:
-                return new PlusOperation(new DynamicParamStrategy());
+                return new PlusOperation();
             case UNDO:
                 return new UndoOperation();
             case MINUS:

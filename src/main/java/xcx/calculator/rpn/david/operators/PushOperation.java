@@ -1,9 +1,14 @@
 package xcx.calculator.rpn.david.operators;
 
+import lombok.Data;
+
 import java.math.BigDecimal;
 import java.util.Stack;
 
-public class PushOperation extends AbstractOperation implements Operation {
+@Data
+public class PushOperation extends AbstractOperation {
+
+    private BigDecimal number;
 
     PushOperation(BigDecimal num){
         this.setNumber(num);

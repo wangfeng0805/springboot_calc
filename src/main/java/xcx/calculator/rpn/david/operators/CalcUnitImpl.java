@@ -7,12 +7,10 @@ import java.math.BigDecimal;
 import java.util.Stack;
 
 @Data
-public abstract class AbstractParamStrategy implements ParamStrategy {
+public class CalcUnitImpl implements CalcUnit {
 
     BigDecimal[] params;
-
     String optName;
-
     int paramsCountNeed;
 
     @Override
@@ -24,15 +22,13 @@ public abstract class AbstractParamStrategy implements ParamStrategy {
     }
 
     @Override
-    public void init(BigDecimal... initValues) throws InsufficientParamsException {
-        if(params.length < paramsCountNeed){
+    public void init(Stack<BigDecimal> stack) throws InsufficientParamsException {
+        if(stack.size() < paramsCountNeed){
             throw new InsufficientParamsException(optName);
         }
-        int length = initValues.length;
-        params = new BigDecimal[length];
-        for(BigDecimal num:initValues){
-            length = length - 1;
-            params[length] = num;
+        params = new BigDecimal[paramsCountNeed];
+        for(int i = paramsCountNeed-1; i >= 0; i--){
+            params[i] = stack.pop();
         }
     }
 }
