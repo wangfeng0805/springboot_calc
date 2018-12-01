@@ -6,17 +6,16 @@ import xcx.calculator.rpn.david.operators.Operation;
 import xcx.calculator.rpn.david.operators.OperationFactory;
 
 import java.math.BigDecimal;
+import java.util.List;
 import java.util.Stack;
 
 @Data
 public class InputEntry {
     private String entryValue;
-    private int entryIndex;
     Operation opt;
 
-    public InputEntry(String entryValue, int entryIndex) {
+    public InputEntry(String entryValue) {
         this.entryValue = entryValue;
-        this.entryIndex = entryIndex;
         initOpt(entryValue);
     }
 

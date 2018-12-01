@@ -2,9 +2,9 @@ package xcx.calculator.rpn.david.operators;
 
 import java.math.BigDecimal;
 
-public class PlusOperation extends AbstractOperation implements Operation {
+public class PlusOperation extends AbstractOperation{
 
-    PlusOperation(){super(2,OperationFactory.PLUS.getOperator());}
+    PlusOperation(){super(2,OperationFactory.PLUS.getOptValue());}
 
     @Override
     public BigDecimal execCalc(BigDecimal[] params){

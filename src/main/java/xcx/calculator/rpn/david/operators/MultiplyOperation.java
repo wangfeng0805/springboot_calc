@@ -2,7 +2,7 @@ package xcx.calculator.rpn.david.operators;
 
 import java.math.BigDecimal;
 
-public class MultiplyOperation extends AbstractOperation implements Operation {
+public class MultiplyOperation extends AbstractOperation{
 
     MultiplyOperation(){
         super(2,OperationFactory.MULTIPLY.name());

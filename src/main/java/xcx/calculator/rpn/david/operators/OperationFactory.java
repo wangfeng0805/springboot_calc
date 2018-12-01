@@ -12,29 +12,28 @@ public enum OperationFactory {
     CLEAR("clear"),
     UNDO("undo");
 
-    private String operator;
+    private String optValue;
 
     OperationFactory(String value) {
-        operator = value;
+        optValue = value;
     }
 
-    public String getOperator() {
-        return operator;
+    public String getOptValue() {
+        return optValue;
     }
 
     public static boolean isValidOperator(String operator) {
-
         for (OperationFactory validOperator : OperationFactory.values()) {
-            if (validOperator.getOperator().equals(operator)) {
+            if (validOperator.getOptValue().equals(operator)) {
                 return true;
             }
         }
         return false;
     }
 
-    public static OperationFactory getOperator(String operator) {
+    public static OperationFactory getOptValue(String operator) {
         for (OperationFactory validOperator : OperationFactory.values()) {
-            if (validOperator.getOperator().equals(operator)) {
+            if (validOperator.getOptValue().equals(operator)) {
                 return validOperator;
             }
         }
@@ -44,8 +43,9 @@ public enum OperationFactory {
     public static Operation getPushOperation(BigDecimal pushValue){
         return new PushOperation(pushValue);
     }
+
     public static Operation getOperation(String operator) {
-        OperationFactory opt = getOperator(operator);
+        OperationFactory opt = getOptValue(operator);
         switch (opt) {
             case PLUS:
                 return new PlusOperation();
@@ -62,7 +62,7 @@ public enum OperationFactory {
             case SQRT:
                 return new SqrtOperation();
             default:
-                throw new RuntimeException("Invalid operator:" + operator);
+                throw new RuntimeException("Invalid optValue:" + operator);
         }
     }
 }
