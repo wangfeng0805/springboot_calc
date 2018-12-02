@@ -1,8 +1,7 @@
-# Spring Boot and Log4j 2 Example
+# Spring Boot 4 rpn calculator Example
 
-Learn how to use Log4j 2 with Spring Boot -
+Spring Boot 4 rpn calculator -
 
-https://www.callicoder.com/spring-boot-log4j-2-example/
 
 ## Requirements
 
@@ -10,20 +9,15 @@ https://www.callicoder.com/spring-boot-log4j-2-example/
 
 2. Maven - 3.x.x
 
+3. Need install lombok in IDE.
 ## Steps to setup
 
-**1. Clone the application**
+
+**1. Build and run the app using maven**
 
 ```bash
-git clone https://github.com/callicoder/spring-boot-log4j-2-demo.git
-```
-
-**2. Build and run the app using maven**
-
-```bash
-cd spring-boot-log4j-2-demo
 mvn package
-java -jar target/log4j2-demo-0.0.1-SNAPSHOT.jar
+java -jar target/calc-sample-0.0.1-SNAPSHOT.jar
 ```
 
 You can also run the app without packaging it using -
