@@ -14,7 +14,7 @@ import static java.lang.StrictMath.sqrt;
 
 /**
  * @Auther: David
- * @Date: 2018-12-02 10:40
+ * @Date: 2018-12-02 10:42
  * @Description:
  */
 public class SqrtOperation extends AbstractOperation{

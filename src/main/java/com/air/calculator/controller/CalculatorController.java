@@ -41,8 +41,4 @@ public class CalculatorController implements BaseController{
             displayService.display(stack);
         }
     }
-
-
-
-
 }

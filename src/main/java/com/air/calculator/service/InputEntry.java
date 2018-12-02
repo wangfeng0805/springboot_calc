@@ -16,7 +16,7 @@ import java.util.Stack;
  * @Auther: David
  * @Date: 2018-12-02 13:50
  * @Description: the input entry represents the entry input by user:
- *   1 optFactory: will create the operation for this entry.
+ *   1 optFactory: set by entry's type, will create the operation for this entry.
  *   2 opt: the operation created by the optFactory.
  *   3 entryValue:the raw value of this entry input by user
  */

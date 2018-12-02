@@ -49,8 +49,8 @@ public abstract class AbstractOperation implements  Operation{
     }
     /**
      *
-     * Desc:use template here as most operation has same steps for calc:+ - * / sqrt,
-     * but those operations need override this method:clear undo, as the logic are different.
+     * Desc:use template here as most operations have same steps for calc:+ - * / sqrt,
+     * but those operations need override this whole method in sub classes:[clear undo] as the steps are different.
      *
      * @param: [stack, operationHistory]
      * @return: void
@@ -68,8 +68,8 @@ public abstract class AbstractOperation implements  Operation{
 
     /**
      *
-     * Desc:core calc logic for different operation,
-     * the concrete classed need provide the implementation,otherwise will throw exception..
+     * Desc:core calc logic for different operations,
+     * the concrete classes need provide the implementation,otherwise will throw exception..
      *
      * @param: [params]
      * @return: java.math.BigDecimal

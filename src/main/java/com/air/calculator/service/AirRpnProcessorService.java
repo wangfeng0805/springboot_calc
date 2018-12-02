@@ -35,8 +35,8 @@ public class AirRpnProcessorService implements RpnProcessorService {
 
     /**
      *
-     * Desc:process input line,parse the line firstly, then loop the etnries:
-     * store the num to stack or calc the num depends on the type of entry's value.
+     * Desc:process input line,parse the line firstly, then loop the entries:
+     * store the num into stack or take the calc depends on the type of entry's value.
      *
      * @param: [line]
      * @return: java.util.Stack<java.math.BigDecimal>
@@ -66,8 +66,8 @@ public class AirRpnProcessorService implements RpnProcessorService {
      *
      * Desc: parse input line, set operation factory by type of entry's value:
      * 1 number operation factory: input is num,currently this factory only creates PushOperation.
-     * 2 command operation factory: input is operation,like:+ - * / sqrt undo clear,
-     *    then the factory will creates different operations respectively later.
+     * 2 command operation factory: input is operation,like:+ - * / sqrt undo clear,etc.
+     *    then the factory will create different kinds of operations respectively later.
      *
      * @param: [line]
      * @return: java.util.Stack<com.air.calculator.service.InputEntry>

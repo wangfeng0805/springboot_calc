@@ -8,7 +8,7 @@ package com.air.calculator.operation.calcUnit;
  * @Auther: David
  * @Date: 2018-12-02 16:21
  * @Description: single param strategy for CalcUnit,
- * need push 1 original param to stack for undo action.
+ * need push 1 original param into stack for undo action.
  * @see com.air.calculator.operation.calcUnit.CalcUnit
  */
 public class CalcUnitWithSingleParam extends CalcUnitAbstract {

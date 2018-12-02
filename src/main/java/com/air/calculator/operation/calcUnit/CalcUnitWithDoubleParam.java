@@ -8,7 +8,7 @@ package com.air.calculator.operation.calcUnit;
  * @Auther: David
  * @Date: 2018-12-02 16:18
  * @Description: double param strategy for CalcUnit,
- * need push 2 original params to stack for undo action.
+ * need push 2 original params into stack for undo action.
  * @see com.air.calculator.operation.calcUnit.CalcUnit
  */
 public class CalcUnitWithDoubleParam extends CalcUnitAbstract {

@@ -33,5 +33,4 @@ public class AirRpnApplication {
 		calculatorController.process();
 		ctx.close();
 	}
-
 }
