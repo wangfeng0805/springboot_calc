@@ -3,13 +3,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.example</groupId>
-	<artifactId>log4j2-demo</artifactId>
+	<groupId>com.air</groupId>
+	<artifactId>calc-sample</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>log4j2-demo</name>
-	<description>Demo project for Spring Boot</description>
+	<name>calc-sample</name>
+	<description>AirWallex Calculator Sample</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

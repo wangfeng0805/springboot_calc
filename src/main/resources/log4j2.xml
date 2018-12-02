@@ -11,8 +11,8 @@
             <PatternLayout pattern="${LOG_PATTERN}"/>
         </Console>
 
-        <RollingFile name="FileAppender" fileName="logs/log4j2-demo.log"
-                     filePattern="logs/log4j2-demo-%d{yyyy-MM-dd}-%i.log">
+        <RollingFile name="FileAppender" fileName="logs/air-calc.log"
+                     filePattern="logs/air-calc-%d{yyyy-MM-dd}-%i.log">
             <PatternLayout>
                 <Pattern>${LOG_PATTERN}</Pattern>
             </PatternLayout>
@@ -25,7 +25,7 @@
     </Appenders>
 
     <Loggers>
-        <logger name="xcx.calculator.rpn" level="debug"></logger>
+        <logger name="com.air.calculator" level="debug"></logger>
         <Root level="info">
             <AppenderRef ref="ConsoleAppender" />
             <AppenderRef ref="FileAppender" />
