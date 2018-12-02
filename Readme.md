@@ -1,6 +1,6 @@
 # Spring Boot 4 rpn calculator Example
 
-Spring Boot 4 rpn calculator -
+Spring Boot 4 rpn calculator
 
 
 ## Requirements
@@ -20,8 +20,13 @@ mvn package
 java -jar target/calc-sample-0.0.1-SNAPSHOT.jar
 ```
 
-You can also run the app without packaging it using -
+You can also run the app without packaging it using
 
 ```bash
 mvn spring-boot:run
+```
+
+**2. Testing**
+```bash
+mvn test
 ```
