@@ -17,7 +17,7 @@ Spring Boot 4 rpn calculator
 
 ```bash
 mvn package
-java -jar target/calc-sample-0.0.1-SNAPSHOT.jar
+java -jar target/springboot-calc-0.0.1-SNAPSHOT.jar
 ```
 
 You can also run the app without packaging it using
